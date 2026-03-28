@@ -2,26 +2,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "CypraeaCore",
+    name: "ScionCore",
     platforms: [
         .iOS(.v17),
         .macOS(.v14),
     ],
     products: [
         .library(
-            name: "CypraeaCore",
-            targets: ["CypraeaCore"]
+            name: "ScionCore",
+            targets: ["ScionCore"]
         ),
     ],
     targets: [
         .target(
-            name: "CypraeaCore",
-            path: "Sources/CypraeaCore"
+            name: "ScionCore",
+            path: "Sources/ScionCore"
         ),
         .testTarget(
-            name: "CypraeaCoreTests",
-            dependencies: ["CypraeaCore"],
-            path: "Tests/CypraeaCoreTests"
+            name: "ScionCoreTests",
+            dependencies: ["ScionCore"],
+            path: "Tests/ScionCoreTests"
         ),
     ]
 )

@@ -1,5 +1,5 @@
 import Testing
-@testable import CypraeaCore
+@testable import ScionCore
 
 @Suite("Portfolio")
 struct PortfolioCalculatorTests {
