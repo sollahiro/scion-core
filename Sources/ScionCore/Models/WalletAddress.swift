@@ -10,10 +10,13 @@ public struct WalletAddress: Identifiable, Codable, Sendable {
     public let id: UUID
     public let address: String
     public let label: String?
+    /// WalletConnect経由で接続されたウォレット（取引自動追跡対象）
+    public let isWalletConnect: Bool
 
-    public init(id: UUID = UUID(), address: String, label: String? = nil) {
+    public init(id: UUID = UUID(), address: String, label: String? = nil, isWalletConnect: Bool = false) {
         self.id = id
         self.address = address
         self.label = label
+        self.isWalletConnect = isWalletConnect
     }
 }

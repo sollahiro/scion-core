@@ -15,6 +15,8 @@ public struct Transaction: Identifiable, Sendable {
     public let toAddress: String
     public let timestamp: Date
     public let blockNumber: Int
+    /// 取引時の1トークンあたりJPY価格（WAC計算に使用）
+    public let priceInJPY: Decimal
 
     public init(
         id: String,
@@ -25,7 +27,8 @@ public struct Transaction: Identifiable, Sendable {
         fromAddress: String,
         toAddress: String,
         timestamp: Date,
-        blockNumber: Int
+        blockNumber: Int,
+        priceInJPY: Decimal
     ) {
         self.id = id
         self.chain = chain
@@ -36,5 +39,6 @@ public struct Transaction: Identifiable, Sendable {
         self.toAddress = toAddress
         self.timestamp = timestamp
         self.blockNumber = blockNumber
+        self.priceInJPY = priceInJPY
     }
 }

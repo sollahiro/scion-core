@@ -78,6 +78,7 @@ private struct TransactionResponse: Decodable {
     let toAddress: String
     let timestamp: Date
     let blockNumber: Int
+    let priceInJPY: Decimal
 
     func toDomain(chain: Chain, token: Token) -> Transaction {
         Transaction(
@@ -89,7 +90,8 @@ private struct TransactionResponse: Decodable {
             fromAddress: fromAddress,
             toAddress: toAddress,
             timestamp: timestamp,
-            blockNumber: blockNumber
+            blockNumber: blockNumber,
+            priceInJPY: priceInJPY
         )
     }
 }
